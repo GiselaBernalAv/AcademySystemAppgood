@@ -1,0 +1,28 @@
+Project Code :<input [(ngModel)]="ProjectModel.ProjectCode"
+  type=text/><br>
+Project Name :<input [(ngModel)]="ProjectModel.ProjectName"
+type=text/><br>
+Project Description :<input [(ngModel)]="ProjectModel.ProjectDescription"
+type=text/><br>
+Project Duration :<input [(ngModel)]="ProjectModel.ProjectDuration"
+type=text/><br>
+<input (click)="Add()"  type=button value="Add Course"/><br>
+{{ProjectModel.ProjectCode}}<br>
+{{ProjectModel.ProjectName}}<br>
+{{ProjectModel.ProjectDescription}}<br>
+{{ProjectModel.ProjectDuration}}<br>
+<table>
+  <tr>
+    <td>Project code</td>
+    <td>Project name</td>
+    <td>Project Description</td>
+    <td>Project Duration</td>
+  </tr>
+  <tr *ngFor="let proy of ProjectsModel">
+    <td>{{proy.ProjectCode}}</td>
+    <td>{{proy.ProjectName}}</td>
+    <td>{{proy.ProjectDescription}}</td>
+    <td>{{proy.ProjectDuration}}</td>
+  </tr>
+</table>
+

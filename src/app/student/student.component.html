@@ -1,0 +1,27 @@
+Student Code :<input [(ngModel)]="StudentModel.StudentCode"
+  type=text/><br>
+Student First Name :<input [(ngModel)]="StudentModel.StudentFirsName"
+type=text/><br>
+Student Last Name :<input [(ngModel)]="StudentModel.StudentLastName"
+type=text/><br>
+Student Age(years) :<input [(ngModel)]="StudentModel.StudentAge"
+type=text/><br>
+<input (click)="Add()"  type=button value="Add Student"/><br>
+{{StudentModel.StudentCode}}<br>
+{{StudentModel.StudentFirsName}}<br>
+{{StudentModel.StudentLastName}}<br>
+{{StudentModel.StudentAge}}<br>
+<table>
+  <tr>
+    <td>Student code</td>
+    <td>Student First Name</td>
+    <td>Student Last Name</td>
+    <td>Student Age</td>
+  </tr>
+  <tr *ngFor="let student of StudentsModel">
+    <td>{{student.StudentCode}}</td>
+    <td>{{student.StudentFirsName}}</td>
+    <td>{{student.StudentLastName}}</td>
+    <td>{{student.StudentAge}}</td>
+  </tr>
+</table>

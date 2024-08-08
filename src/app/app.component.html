@@ -1,0 +1,14 @@
+
+<app-header (selectedFeature)="onNavigateHeader($event)"></app-header>
+
+<h2>Welcome to the Academy System</h2>
+
+<div>
+  <section class="content">
+    <app-home *ngIf="loadedFeature==='home'"></app-home>
+    <app-student *ngIf="loadedFeature==='student'"></app-student>
+    <app-course *ngIf="loadedFeature==='course'"></app-course>
+    <app-project  *ngIf="loadedFeature==='project'"></app-project>
+    <app-about  *ngIf="loadedFeature==='about'"></app-about>
+  </section>
+</div>

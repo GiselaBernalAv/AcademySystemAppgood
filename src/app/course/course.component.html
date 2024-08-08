@@ -1,0 +1,35 @@
+<form>
+Course Code :<input  [(ngModel)]="CourseModel.CourseCode"
+  type=text/><br>
+Course Name :<input  [(ngModel)]="CourseModel.CourseName"
+type=text/><br>
+Course Description :<input [(ngModel)]="CourseModel.CourseDescription"
+type=text/><br>
+<input (click)="Add()"  type=button value="Add Course"/><br>
+</form>
+{{CourseModel.CourseCode}}<br>
+{{CourseModel.CourseName}}<br>
+{{CourseModel.CourseDescription}}<br>
+
+<!--<div *ngIf="CourseModel.formCourseGroup.dirty"
+      [hidden]="!(hasError('pattern','CustomerCodeControl'))" >
+      course code format is not proper</div><br>
+<div *ngIf="CourseModel.formCourseGroup.dirty"
+[hidden]="!(hasError('required','CustomerCodeControl'))">
+Course code is required</div><br>
+<div *ngIf="CourseModel.formCourseGroup.dirty"
+[hidden]="!(hasError('required','CustomerNameControl'))"
+>Course name is required</div><br>
+-->
+<table>
+  <tr>
+    <td>Course code</td>
+    <td>Course name</td>
+    <td>Course Description</td>
+  </tr>
+  <tr *ngFor="let cust of CoursesModel">
+    <td>{{cust.CourseCode}}</td>
+    <td>{{cust.CourseName}}</td>
+    <td>{{cust.CourseDescription}}</td>
+  </tr>
+</table>
